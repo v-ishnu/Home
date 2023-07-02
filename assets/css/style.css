@@ -8,6 +8,7 @@ body {
   /* unvisited link */
 a {
   color: #6244C5;
+  text-decoration:none;
 }
 
 /* mouse over link */
@@ -306,7 +307,7 @@ h6 {
 #hero p {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -326,9 +327,10 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 18px;
     line-height: 36px;
   }
+ 
 
   #hero h2 {
     font-size: 18px;
