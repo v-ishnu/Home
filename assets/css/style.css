@@ -306,7 +306,8 @@ h6 {
 
 #hero p {
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+  margin-left: 1px;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
@@ -327,7 +328,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 18px;
+    font-size: 49px;
     line-height: 36px;
   }
  
