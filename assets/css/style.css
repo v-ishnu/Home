@@ -4,15 +4,27 @@ body {
   color: #272829;
 }
 
-a {
-  color: #149ddd;
-  text-decoration: none;
+
+  /* unvisited link */
+a:link {
+  color: #6244C5;
 }
 
-a:hover {
-  color: #37b3ed;
-  text-decoration: none;
+/* visited link */
+a:visited {
+  color: white;
 }
+
+/* mouse over link */
+a:hover {
+  color: #6244C5;
+}
+
+/* selected link */
+a:active {
+  color: #6610f2;
+}
+
 
 h1,
 h2,
@@ -273,27 +285,7 @@ h6 {
   letter-spacing: 1px;
 }
 
-#hero p span {
-  /* unvisited link */
-a:link {
-  color: red;
-}
 
-/* visited link */
-a:visited {
-  color: green;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
-}
-}
 
 @media (min-width: 1024px) {
   #hero {
