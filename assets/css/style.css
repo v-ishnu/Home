@@ -10,20 +10,11 @@ a {
   color: #6244C5;
 }
 
-/* visited link */
-a:visited {
-  color: white;
-}
-
 /* mouse over link */
 a:hover {
-  color: #6244C5;
-}
-
-/* selected link */
-a:active {
   color: #6610f2;
 }
+
 
 
 h1,
