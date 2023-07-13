@@ -389,6 +389,244 @@ display: flex; align-items: center; justify-content: center; background: url(htt
 
     
     <!-- ======= Portfolio Section ======= -->
+
+
+<!DOCTYPE html>
+<html>
+<head><style>
+  .portfolio{
+    width: 100%;
+    padding: 30px 8%;
+    background-color: var(--body-clr);
+  }
+  .portfolio .section-head{
+    max-width: 700px;
+    margin: 0px auto 25px;
+    text-align: center;
+  }
+  .section-head h1{
+    position: relative;
+    font-size: 32px;
+    margin: 10px 0px 30px;
+    color: var(--primary-clr);
+  }
+  .button-group{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .button-group .button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #c8d1d8;
+    color: var(--primary-clr);
+    font-style: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  .button-group .button.active{
+    background-color: var(--primary-clr);
+    color: var(--body-clr);
+  }
+  .button-group .button:hover{
+    background-color: var(--primary-clr);
+    color: var(--body-clr);
+  }
+  div.gallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.gallery .item{
+    position: relative;
+    margin: 4px;
+    width: calc(33.33% - 8px);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+  }
+  div.gallery .item:hover img{
+    transform: scale(1.15);
+  }
+  .item .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5,85,92,0.7);
+    color: var(--body-clr);
+    padding: 15px;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+  .item:hover .overlay{
+    opacity: 1;
+  }
+  .item .overlay a{
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid var(--body-clr);
+    color: var(--body-clr);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  .item .overlay a:hover{
+    background-color: var(--body-clr);
+    color: var(--primary-clr);
+  }
+  
+  
+  @media(max-width: 1024px){
+    div.gallery .item{
+      width: calc(50% - 8px);
+    }
+  }
+  
+  @media(max-width: 600px){
+    div.gallery .item{
+      width: 100%;
+      margin: 4px 0px;
+    }
+  }
+</style>
+	<!--  *****   Link To Custom CSS Style Sheet   *****  -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!--  *****   Link To Font Awsome Icons   *****  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+</head>
+<body>
+<section class="portfolio">
+	
+	<header class="section-head">
+		<h1>Some Of My Latest Works</h1>
+	</header>
+
+	<main class="mainContainer">
+		
+		<!--  *****  Buttons Section Starts  *****  -->
+		<div class="button-group">
+			<button class="button active" data-filter="*">All</button>
+			<button class="button" data-filter=".design">Design</button>
+		<button class="button" data-filter=".development">Development</button>
+			<button class="button" data-filter=".logo">Logo</button>
+		</div>
+		<!--  *****  Buttons Section Ends  *****  -->
+
+		<!--  *****  Gallery Section Starts  *****  -->
+		<div class="gallery">
+			
+			<!--  *****  Card 1 Starts  *****  -->
+			<div class="item design">
+				<img src="design1.jpg">
+				<div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div>
+			</div>
+			<!--  *****  Card 1 Ends  *****  -->
+
+			<!--  *****  Card 2 Starts  *****  -->
+			<div class="item design">
+				<img src="design2.jpg">
+				<div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div>
+			</div>
+			<!--  *****  Card 2 Ends  *****  -->
+
+			<!--  *****  Card 3 Starts  *****  -->
+			<div class="item development">
+				<img src="website1.jpg">
+				<div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div>
+			</div>
+			<!--  *****  Card 3 Ends  *****  -->
+
+			<!--  *****  Card 4 Starts  *****  -->
+			<div class="item development">
+				<img src="website2.jpg">
+				<div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div>
+			</div>
+			<!--  *****  Card 4 Ends  *****  -->
+
+			<!--  *****  Card 5 Starts  *****  -->
+			<div class="item development">
+				<img src="website3.jpg">
+				<div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div>
+			</div>
+			<!--  *****  Card 5 Ends  *****  -->
+
+			<!--  *****  Card 6 Starts  *****  -->
+			<div class="item logo">
+				<img src="logo1.jpg">
+				<div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div>
+			</div>
+			<!--  *****  Card 6 Ends  *****  -->
+
+		</div>
+		<!--  *****  Gallery Section Ends  *****  -->
+
+	</main>
+
+</section>
+
+
+<!--   *****   JQuery Link   *****   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!--   *****   Isotope Filter Link   *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript">
+	var $galleryContainer = $('.gallery').isotope({
+		itemSelector: '.item',
+  		layoutMode: 'fitRows'
+	})
+
+	$('.button-group .button').on('click', function(){
+		$('.button-group .button').removeClass('active');
+		$(this).addClass('active');
+
+		var value = $(this).attr('data-filter');
+		$galleryContainer.isotope({
+			filter: value 
+		})
+	})
+</script>
+
+</body>
+</html>
+
+
+    
     <!--<section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
