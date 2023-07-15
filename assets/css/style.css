@@ -617,117 +617,6 @@ section {
 --------------------------------------------------------------*/
 
   
-  .portfolio{
-    width: 100%;
-    padding: 30px 8%;
-    background-color: var(--body-clr);
-  }
-  .portfolio .section-head{
-    max-width: 700px;
-    margin: 0px auto 25px;
-    text-align: center;
-  }
-  .section-head h1{
-    position: relative;
-    font-size: 32px;
-    margin: 10px 0px 30px;
-    color: var(--primary-clr);
-  }
-  .button-group{
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .button-group .button{
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    color: var(--primary-clr);
-    font-style: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.4s;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-  }
-  .button-group .button.active{
-    background-color: var(--primary-clr);
-    color: var(--body-clr);
-  }
-  .button-group .button:hover{
-    background-color: var(--primary-clr);
-    color: var(--body-clr);
-  }
-  div.gallery{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  div.gallery .item{
-    position: relative;
-    margin: 4px;
-    width: calc(33.33% - 8px);
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: 0.3s;
-  }
-  div.gallery .item:hover img{
-    transform: scale(1.15);
-  }
-  .item .overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(5,85,92,0.7);
-    color: var(--body-clr);
-    padding: 15px;
-    overflow: hidden;
-    transition: opacity 0.2s ease-in-out;
-    opacity: 0;
-  }
-  .item:hover .overlay{
-    opacity: 1;
-  }
-  .item .overlay a{
-    display: inline-block;
-    padding: 8px 16px;
-    border: 2px solid var(--body-clr);
-    color: var(--body-clr);
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-  }
-  .item .overlay a:hover{
-    background-color: var(--body-clr);
-    color: var(--primary-clr);
-  }
-  
-  
-  @media(max-width: 1024px){
-    div.gallery .item{
-      width: calc(50% - 8px);
-    }
-  }
-  
-  @media(max-width: 600px){
-    div.gallery .item{
-      width: 100%;
-      margin: 4px 0px;
-    }
-  }
   
   
   /*.portfolio-details {
@@ -850,7 +739,104 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .testimonials-carousel,
+
+  .testimonial-left,
+.testimonial-right {
+    position: relative;
+}
+
+.testimonial-left img,
+.testimonial-right img {
+    position: absolute;
+    padding: 5px;
+    border: 1px solid var(--secondary);
+    border-radius: 70px;
+}
+
+.testimonial-left img:nth-child(1),
+.testimonial-right img:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-left img:nth-child(2),
+.testimonial-right img:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.testimonial-left img:nth-child(3),
+.testimonial-right img:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    bottom: 10%;
+    right: 10%;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 120px;
+    height: 120px;
+}
+
+.testimonial-carousel .testimonial-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid var(--secondary);
+    border-radius: 60px;
+}
+
+.testimonial-carousel .owl-dots {
+    height: 40px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 5px;
+    left: 5px;
+    border-radius: 16px;
+    background: var(--secondary);
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active::after {
+    background: var(--primary);
+}
+  
+  
+  /*.testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
 }
