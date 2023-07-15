@@ -6,8 +6,27 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
+
+<?php
+
+if (isset($_POST['submit'])) {
+$name = $_POST['name'];
+$subject = $_POST['subject'];
+$mailFrom = $_POST['mail'];
+$message = $_POST['message'];
+
+
+$mailTo = "Vishnuprakash572@gmail.com";
+$headers = "From: ".$mailFrom;
+$txt = "You have received an e-mail from ".$name.".\n\n".$message;
+
+mail($mailTo, $subject, $txt, $headers);
+header("Location: index.php?mailsend");
+}
+
+
   // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'vishnuprakash572@gmail.com';
+ /* $receiving_email_address = 'vishnuprakash572@gmail.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -33,9 +52,11 @@
   );
   */
 
-  $contact->add_message( $_POST['name'], 'From');
+  /*$contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
 
-  echo $contact->send();
+  echo $contact->send();*/
+
+
 ?>
