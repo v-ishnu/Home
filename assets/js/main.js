@@ -216,15 +216,6 @@
   /**
    * Testimonials slider
    */
-
- $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        items: 1,
-        dots: true,
-        loop: true,
-    });
-
   
   new Swiper('.testimonials-slider', {
     speed: 600,
