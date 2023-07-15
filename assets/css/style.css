@@ -836,7 +836,7 @@ section {
 }
   
   
-  /*.testimonials .testimonials-carousel,
+.testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
 }
