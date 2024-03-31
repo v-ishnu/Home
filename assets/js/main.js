@@ -261,3 +261,11 @@
   new PureCounter();
 
 })()
+
+
+
+
+// TOAST Notification
+$(function(){
+  $("#includedContent").load("assets\Toast Notification\index.html"); 
+});
